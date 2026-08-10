@@ -31,7 +31,6 @@ h4 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
   line-height: 1.02;
-  color: var(--ink);
 }
 .mono {
   font-family: "IBM Plex Mono", monospace;
@@ -228,7 +227,7 @@ nav a:hover::after {
   color: var(--green);
 }
 .hero-panel {
-  background-image: url("card-img.png");
+  background-image: url("images/card-img.png");
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -320,7 +319,7 @@ section {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .stats-band div {
   padding: 34px 30px;
@@ -456,19 +455,13 @@ details[open] .sum-plus::after {
   padding: 40px 34px;
 }
 .why-icon {
-  width: 46px;
-  height: 46px;
-  border: 1.5px solid var(--green);
+  width: 70px;
+  height: 70px;
+  border: #1e6b45 3px solid;
   border-radius: 50%;
   margin-bottom: 22px;
+  padding: 10px;
   position: relative;
-}
-.why-icon::before {
-  content: "";
-  position: absolute;
-  inset: 9px;
-  border: 1.5px solid var(--green);
-  border-radius: 50%;
 }
 .why-col h4 {
   font-size: 1.3rem;
@@ -521,6 +514,9 @@ details[open] .sum-plus::after {
     linear-gradient(160deg, #1c1c1a, #111110);
 }
 .zig-photo .ref {
+  opacity: 0.75;
+  padding: 8px;
+  background-color: #111;
   position: absolute;
   bottom: 18px;
   left: 18px;
@@ -528,12 +524,23 @@ details[open] .sum-plus::after {
   font-size: 0.66rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.55;
 }
 .zig-photo .frame {
   position: absolute;
   inset: 16px;
   border: 1px dashed rgba(246, 244, 239, 0.25);
+}
+.zig-photo .fr-1 {
+  background-image: url("images/recent-1.png");
+  background-size: cover;
+}
+.zig-photo .fr-2 {
+  background-image: url("images/recent-2.png");
+  background-size: cover;
+}
+.zig-photo .fr-3 {
+  background-image: url("images/recent-3.png");
+  background-size: cover;
 }
 .zig-text {
   padding: 48px 54px;
