@@ -70,8 +70,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
 }
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -80,17 +86,18 @@ header {
   font-weight: 700;
   font-size: 1.05rem;
 }
-.brand .dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--green);
+.brand img {
+  width: 80px;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 36px;
+  margin: 0;
+  padding: 0;
 }
+
 nav a {
   font-family: "IBM Plex Mono";
   font-size: 0.72rem;
@@ -99,6 +106,7 @@ nav a {
   position: relative;
   padding-bottom: 3px;
 }
+
 nav a::after {
   content: "";
   position: absolute;
@@ -109,8 +117,14 @@ nav a::after {
   background: var(--green);
   transition: width 0.2s ease;
 }
+
 nav a:hover::after {
   width: 100%;
+}
+
+/* Request a Quote stays on the right */
+.navrow > .btn {
+  margin-left: auto;
 }
 .btn {
   font-family: "IBM Plex Mono";
