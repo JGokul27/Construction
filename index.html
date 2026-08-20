@@ -1,16 +1,140 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HRA Construction Ltd — Birmingham Building Contractors</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Building Contractors Birmingham | HRA Construction Ltd</title>
+
+  <meta
+    name="description"
+    content="HRA Construction Ltd is a Birmingham building contractor based in Edgbaston, delivering new builds, extensions, renovations, groundworks and commercial fit-outs."
+  />
+
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <link rel="canonical" href="https://hraconstructionsltd.com/" />
+
+  <meta name="author" content="HRA Construction Ltd" />
+  <meta name="theme-color" content="#123F29" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hraconstructionsltd.com/" />
+  <meta
+    property="og:title"
+    content="Building Contractors Birmingham | HRA Construction Ltd"
+  />
+  <meta
+    property="og:description"
+    content="Birmingham building contractors for new builds, extensions, renovations, groundworks and commercial fit-outs."
+  />
+  <meta property="og:site_name" content="HRA Construction Ltd" />
+  <meta property="og:locale" content="en_GB" />
+  <meta
+    property="og:image"
+    content="https://hraconstructionsltd.com/images/logo.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="HRA Construction Ltd Birmingham building contractors"
+  />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Building Contractors Birmingham | HRA Construction Ltd"
+  />
+  <meta
+    name="twitter:description"
+    content="Birmingham building contractors for new builds, extensions, renovations, groundworks and commercial fit-outs."
+  />
+  <meta
+    name="twitter:image"
+    content="https://hraconstructionsltd.com/images/logo.png"
+  />
+
+  <!-- Fonts -->
+<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://hraconstructionsltd.com/#website",
+        "url": "https://hraconstructionsltd.com/",
+        "name": "HRA Construction Ltd",
+        "alternateName": "HRA Construction",
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://hraconstructionsltd.com/#business",
+        "name": "HRA Construction Ltd",
+        "url": "https://hraconstructionsltd.com/",
+        "logo": "https://hraconstructionsltd.com/images/logo.png",
+        "image": "https://hraconstructionsltd.com/images/logo.png",
+        "description": "Building contractor based in Edgbaston, Birmingham, delivering new builds, extensions, renovations, groundworks and commercial fit-outs.",
+        "telephone": "+44 121 000 0000",
+        "email": "info@hraconstruction.co.uk",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Flat-1, 42 Stirling Road",
+          "addressLocality": "Edgbaston",
+          "addressRegion": "Birmingham",
+          "postalCode": "B16 9BL",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Birmingham"
+          },
+          {
+            "@type": "Place",
+            "name": "Greater Birmingham"
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "knowsAbout": [
+          "New build construction",
+          "Extensions and renovations",
+          "Groundworks and civils",
+          "Commercial fit-outs"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
   <body>
     <header>
       <div class="navrow wrap">
@@ -19,7 +143,7 @@
             <img src="images/logo.png" alt="" />
           </div>
 
-          <nav id="site-navigation">
+          <nav>
             <ul>
               <li><a href="#services">Services</a></li>
               <li><a href="#why">Why Us</a></li>
@@ -32,7 +156,7 @@
 
         <a href="#contact" class="btn solid">Request a Quote</a>
 
-        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-navigation">
+        <button class="menu-toggle" aria-label="Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -429,23 +553,19 @@
     <script>
       const toggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");
-
       toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("mobile-open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("mobile-open");
-          toggle.setAttribute("aria-expanded", "false");
-        });
-      });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 760) {
-          nav.classList.remove("mobile-open");
-          toggle.setAttribute("aria-expanded", "false");
+        const open = nav.style.display === "block";
+        nav.style.display = open ? "none" : "block";
+        if (!open) {
+          nav.style.position = "absolute";
+          nav.style.top = "100%";
+          nav.style.left = "0";
+          nav.style.right = "0";
+          nav.style.background = "var(--paper)";
+          nav.style.borderTop = "1px solid var(--line)";
+          nav.style.padding = "20px 40px";
+          nav.querySelector("ul").style.flexDirection = "column";
+          nav.querySelector("ul").style.gap = "18px";
         }
       });
     </script>
