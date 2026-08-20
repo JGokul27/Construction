@@ -19,7 +19,7 @@
             <img src="images/logo.png" alt="" />
           </div>
 
-          <nav>
+          <nav id="site-navigation">
             <ul>
               <li><a href="#services">Services</a></li>
               <li><a href="#why">Why Us</a></li>
@@ -32,7 +32,7 @@
 
         <a href="#contact" class="btn solid">Request a Quote</a>
 
-        <button class="menu-toggle" aria-label="Menu">
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -429,19 +429,23 @@
     <script>
       const toggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");
+
       toggle.addEventListener("click", () => {
-        const open = nav.style.display === "block";
-        nav.style.display = open ? "none" : "block";
-        if (!open) {
-          nav.style.position = "absolute";
-          nav.style.top = "100%";
-          nav.style.left = "0";
-          nav.style.right = "0";
-          nav.style.background = "var(--paper)";
-          nav.style.borderTop = "1px solid var(--line)";
-          nav.style.padding = "20px 40px";
-          nav.querySelector("ul").style.flexDirection = "column";
-          nav.querySelector("ul").style.gap = "18px";
+        const isOpen = nav.classList.toggle("mobile-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("mobile-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 760) {
+          nav.classList.remove("mobile-open");
+          toggle.setAttribute("aria-expanded", "false");
         }
       });
     </script>

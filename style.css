@@ -856,3 +856,631 @@ footer li a:hover {
     padding: 36px 28px;
   }
 }
+
+
+/* =========================================================
+   RESPONSIVE SYSTEM — ALL SCREEN WIDTHS
+   ========================================================= */
+
+/* Prevent horizontal overflow on every viewport */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+}
+
+/* Large desktop / wide monitors */
+@media (min-width: 1400px) {
+  .wrap {
+    max-width: 1360px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .hero {
+    padding-top: 104px;
+  }
+
+  section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .hero-grid {
+    gap: 72px;
+  }
+
+  .hero-panel {
+    min-height: 320px;
+    padding: 44px 40px;
+  }
+}
+
+/* Desktop and laptop */
+@media (min-width: 981px) and (max-width: 1199px) {
+  .wrap {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .nav-left {
+    gap: 28px;
+  }
+
+  nav ul {
+    gap: 22px;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  }
+
+  .contact-inner {
+    gap: 44px;
+  }
+
+  .foot-top {
+    gap: 28px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+  .wrap {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  header .navrow {
+    min-height: 72px;
+  }
+
+  .nav-left {
+    gap: 24px;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+
+  nav a {
+    font-size: 0.66rem;
+  }
+
+  .navrow > .btn {
+    padding: 10px 16px;
+  }
+
+  .hero {
+    padding-top: 64px;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 6.5vw, 4.3rem);
+  }
+
+  .hero-panel {
+    min-height: 240px;
+    padding: 30px 26px;
+  }
+
+  .hero-copy-row {
+    gap: 24px;
+    margin-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  section {
+    padding: 78px 0;
+  }
+
+  .head-row {
+    margin-bottom: 40px;
+  }
+
+  .stats-band {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-band div {
+    padding: 28px 20px;
+  }
+
+  .stats-band .num {
+    font-size: 2rem;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-col {
+    padding: 32px 24px;
+  }
+
+  .zig-text {
+    padding: 40px 36px;
+  }
+
+  .zig-text h3 {
+    font-size: 1.7rem;
+  }
+
+  .contact-inner {
+    gap: 44px;
+  }
+
+  .form-block {
+    padding: 34px 30px;
+  }
+
+  .foot-top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 760px) {
+  .wrap {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  header {
+    position: sticky;
+  }
+
+  header .navrow {
+    min-height: 68px;
+  }
+
+  .nav-left {
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 68px;
+    height: auto;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .navrow > .btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .hero {
+    padding-top: 52px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .hero-panel {
+    min-height: 230px;
+  }
+
+  .hero-copy-row {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 28px;
+    padding-bottom: 34px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-ctas,
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .hero-ctas .btn {
+    justify-content: center;
+  }
+
+  .stats-band {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-band div {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .stats-band div:last-child {
+    border-bottom: none;
+  }
+
+  section {
+    padding: 64px 0;
+  }
+
+  .head-row {
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 34px;
+  }
+
+  .head-row p {
+    max-width: 100%;
+  }
+
+  .accordion-list summary {
+    padding: 24px 0;
+    gap: 14px;
+  }
+
+  .sum-left {
+    min-width: 0;
+    gap: 14px;
+  }
+
+  .sum-idx {
+    width: 24px;
+    flex-shrink: 0;
+  }
+
+  .accordion-list h3 {
+    font-size: clamp(1.15rem, 5vw, 1.45rem);
+  }
+
+  .acc-body {
+    padding: 0 0 28px 38px;
+    gap: 14px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-col {
+    padding: 30px 24px;
+  }
+
+  .zig-row {
+    grid-template-columns: 1fr;
+  }
+
+  .zig-photo {
+    min-height: clamp(220px, 58vw, 360px);
+  }
+
+  .zig-text {
+    padding: 34px 26px;
+  }
+
+  .zig-text h3 {
+    font-size: clamp(1.45rem, 6vw, 1.9rem);
+  }
+
+  .testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testi-card {
+    padding: 34px 26px;
+  }
+
+  .testi-card blockquote {
+    font-size: 1.12rem;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .contact-info > p {
+    max-width: 100%;
+  }
+
+  .info-line {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .form-block {
+    padding: 30px 24px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .foot-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 24px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  header .navrow {
+    min-height: 62px;
+  }
+
+  .brand img {
+    width: 60px;
+  }
+
+  .marquee {
+    padding: 9px 0;
+  }
+
+  .marquee-track {
+    gap: 28px;
+  }
+
+  .marquee-track span {
+    font-size: 0.62rem;
+    gap: 28px;
+  }
+
+  .marquee-track span::after {
+    margin-left: 28px;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .hero-eyebrow::before,
+  .head-tag::before {
+    width: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+    line-height: 1.04;
+  }
+
+  .hero-panel {
+    min-height: 210px;
+    padding: 24px 20px;
+  }
+
+  .hero-panel p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 11px 16px;
+  }
+
+  .hero-copy-row {
+    padding-bottom: 28px;
+  }
+
+  section {
+    padding: 52px 0;
+  }
+
+  .head-row h2 {
+    font-size: clamp(1.8rem, 9vw, 2.45rem);
+  }
+
+  .stats-band .num {
+    font-size: 1.85rem;
+  }
+
+  .stats-band div {
+    padding: 22px 18px;
+  }
+
+  .accordion-list summary {
+    align-items: flex-start;
+  }
+
+  .sum-left {
+    align-items: flex-start;
+  }
+
+  .sum-idx {
+    margin-top: 3px;
+  }
+
+  .sum-plus {
+    width: 29px;
+    height: 29px;
+  }
+
+  .acc-body {
+    padding-left: 0;
+  }
+
+  .acc-body p {
+    max-width: 100%;
+  }
+
+  .why-col {
+    padding: 26px 20px;
+  }
+
+  .why-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+  }
+
+  .zig-photo {
+    min-height: 220px;
+  }
+
+  .zig-photo .frame {
+    inset: 10px;
+  }
+
+  .zig-photo .ref {
+    left: 10px;
+    bottom: 10px;
+    font-size: 0.58rem;
+  }
+
+  .zig-text {
+    padding: 28px 20px;
+  }
+
+  .testi-card {
+    padding: 28px 20px;
+  }
+
+  .testi-card blockquote {
+    font-size: 1.05rem;
+  }
+
+  .info-line {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .form-block {
+    padding: 24px 18px;
+  }
+
+  .field input,
+  .field textarea {
+    font-size: 16px; /* prevents iOS zoom */
+  }
+
+  .foot-top {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .foot-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .wrap {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .hero-panel {
+    padding: 22px 17px;
+  }
+
+  .accordion-list h3 {
+    font-size: 1.08rem;
+  }
+
+  .sum-plus {
+    width: 27px;
+    height: 27px;
+  }
+
+  .zig-text {
+    padding: 25px 17px;
+  }
+
+  .form-block {
+    padding: 22px 15px;
+  }
+}
+
+/* Accessible mobile navigation */
+@media (max-width: 760px) {
+  header .navrow {
+    position: relative;
+  }
+
+  header nav.mobile-open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    padding: 18px 16px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 12px 25px rgba(17, 17, 16, 0.08);
+  }
+
+  header nav.mobile-open ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  header nav.mobile-open li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  header nav.mobile-open li:last-child {
+    border-bottom: none;
+  }
+
+  header nav.mobile-open a {
+    display: block;
+    padding: 14px 4px;
+  }
+}
+
+/* Better wrapping for long content */
+.hero-panel,
+.hero-copy,
+.head-row p,
+.acc-body p,
+.zig-text p,
+.contact-info,
+.form-block,
+.info-line div,
+footer p,
+footer li {
+  overflow-wrap: anywhere;
+}
